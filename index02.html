@@ -1,77 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>はじめてのHTML入門ー課題2</title>
 </head>
 
-<!-- header begin -->
-<header class="underline">
-    <p>ここはヘッダーです。</p>
-</header>
-<!-- header end -->
+<body>
+    <!-- header begin -->
+    <header class="underline">
+        <p>ここはヘッダーです。</p>
+    </header>
+    <!-- header end -->
 
-<!-- main begin -->
-<main class="underline">
+    <!-- main begin -->
+    <main class="underline">
 
-    <h1>最近あった嬉しい出来事</h1>
-    <ul>
-        <li>
-            <p>プログラミングスクール受講開始</p>
-        </li>
-    </ul>
+        <h1>最近あった嬉しい出来事</h1>
+        <ul>
+            <li>
+                <p>プログラミングスクール受講開始</p>
+            </li>
+        </ul>
 
-    <!-- main content begin -->
-    <article>
-        <section>
-            <h2>受講開始</h2>
-            <ul>
-                <li>
-                    <p>受講開始日：<strong>2025年7月28日</strong></p>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>中国貴州省黔東南ミャオ族トン族自治州</h2>
-            <img src="guizhou.png" alt="#"><br>
-            <span><a href="http://kishu-kanko.com/city_08.html" target="_blank">サイト情報</a></span>
-        </section>
-        <section>
-            <h2>動画</h2>
-            <video src="5g.mp4" controls muted width="600px" height="250px"></video>
-            <details>
-                <summary>詳細内容</summary>
+        <!-- main content begin -->
+        <article>
+            <section>
+                <h2>受講開始</h2>
                 <ul>
-                    <li><a href="https://www.youtube.com/watch?v=mo1lNRKnayA" target="_blank">動画リンク</a></li>
-                    <li><a href="#">トップに戻る</a></li>
-                    <li">
-                        <details>
-                            <summary>HTMLを書いてみた感想</summary>
-                            <p>
-                                実際に手を動かすことによって、<strong>より一層理解が深まった。</strong><br>
-                                HTML自体は基礎の基礎だけど、<strong>基礎だからこそ大事だと改めて実感した。</strong><br>
-                            </p>
-                        </details>
-                        </li>
+                    <li>
+                        <p>受講開始日：<strong>2025年7月28日</strong></p>
+                    </li>
                 </ul>
-            </details>
-            <form>
-                <label for="comment">コメント</label><br>
-                <textarea name="comment" id="comment" rows="4" cols="40" placeholder="ここに入力..."></textarea><br>
-                <input type="submit" value="送信">
-            </form>
-        </section>
+            </section>
+            <section>
+                <h2>中国貴州省黔東南ミャオ族トン族自治州</h2>
+                <img src="guizhou.png" alt="#"><br>
+                <span><a href="http://kishu-kanko.com/city_08.html" target="_blank">サイト情報</a></span>
+            </section>
+            <section>
+                <h2>動画</h2>
+                <video src="5g.mp4" controls muted width="600px" height="250px"></video>
+                <details>
+                    <summary>詳細内容</summary>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=mo1lNRKnayA" target="_blank">動画リンク</a></li>
+                        <li><a href="#">トップに戻る</a></li>
+                        <li">
+                            <details>
+                                <summary>HTMLを書いてみた感想</summary>
+                                <p>
+                                    実際に手を動かすことによって、<strong>より一層理解が深まった。</strong><br>
+                                    HTML自体は基礎中の基礎だけど、<strong>基礎だからこそ大事だと改めて実感した。</strong><br>
+                                </p>
+                            </details>
+                            </li>
+                    </ul>
+                </details>
+                <form>
+                    <label for="comment">コメント</label><br>
+                    <textarea name="comment" id="comment" rows="4" cols="40" placeholder="ここに入力..."></textarea><br>
+                    <input type="submit" value="送信">
+                </form>
+            </section>
+        </article>
         <!-- main content end -->
+    </main>
+    <!-- main end -->
 
+    <!-- footer begin -->
+    <footer>
+        <p>ここはフッダーです。</p>
+    </footer>
+    <!-- footer end -->
+</body>
 
+</html>
 
-    </article>
-    <!-- main content end -->
-</main>
-<!-- main end -->
-
-<!-- footer begin -->
-<footer>
-    <p>ここはフッダーです。</p>
-</footer>
-<!-- footer end -->
 
 <style>
     .underline::after {
