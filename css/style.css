@@ -1,0 +1,36 @@
+
+.h1-red {
+    color: red;
+}
+
+.h2-black {
+    font-weight: lighter;
+    color: black;
+}
+
+p {
+    border: 2px solid red;
+    background-color: gray;
+    color: black;
+}
+
+ul > li:nth-child(1) {
+    color: blue; 
+}
+
+ul > li:nth-child(2) {
+    color: black; 
+}
+ul > li:nth-child(3) {
+    color: blue; 
+    font-weight: lighter;
+}
+ul > li:nth-child(4) {
+    color: purple;
+    font-weight: bold; 
+}
+ul > li:nth-child(5) {
+    color: black; 
+}
+
+
