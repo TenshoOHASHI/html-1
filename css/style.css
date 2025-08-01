@@ -3,33 +3,33 @@
     color: red;
 }
 
-.h2-black {
+.h2-contents {
     font-weight: lighter;
     color: black;
+    background-color: gray;
+    border: 1px solid red;
 }
 
-p {
-    border: 2px solid red;
-    background-color: gray;
+.h2-contents__text {
     color: black;
 }
 
-ul > li:nth-child(1) {
-    color: blue; 
-}
-
-ul > li:nth-child(2) {
+.list_black {
     color: black; 
 }
-ul > li:nth-child(3) {
+
+.list_blue {
     color: blue; 
-    font-weight: lighter;
 }
-ul > li:nth-child(4) {
+.list_black-bold {
+    color: black; 
+    font-weight: bold;
+}
+.list_purple-bord {
     color: purple;
     font-weight: bold; 
 }
-ul > li:nth-child(5) {
+.list_black {
     color: black; 
 }
 
