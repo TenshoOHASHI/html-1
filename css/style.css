@@ -4,32 +4,36 @@
 }
 
 .h2-contents {
-    font-weight: lighter;
-    color: black;
     background-color: gray;
-    border: 1px solid red;
+    border: 2px solid red;
+}
+
+.h2-contents__title {
+    color: black;
+    font-weight: lighter;
 }
 
 .h2-contents__text {
     color: black;
 }
 
-.list_black {
+
+.list__item--black {
     color: black; 
 }
 
-.list_blue {
+.list__item--blue {
     color: blue; 
 }
-.list_black-bold {
+.list__item--black-bold {
     color: black; 
     font-weight: bold;
 }
-.list_purple-bord {
+.list__item--purple-bold {
     color: purple;
     font-weight: bold; 
 }
-.list_black {
+.list__item--black {
     color: black; 
 }
 
