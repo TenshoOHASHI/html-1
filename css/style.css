@@ -1,12 +1,12 @@
-/* body {
+body {
     margin: 0px;
-} */
+}
 
 .grid-container {
     display: grid;
     grid-template-columns: 120px 1fr 160px;
-    /* 修正箇所 */
-    grid-template-rows: 80px 1fr;
+    /* 追加修正 */
+    grid-template-rows: 60px 1fr;
     gap: 10px;
 
 }
@@ -51,7 +51,7 @@
 
     & .footer__text {
         text-align: center;
-        /* 修正追加 */
+        /* 追加修正 */
         font-weight: bold;
     }
 }
@@ -67,6 +67,12 @@
 .menu-left {
     height: 150vh;
     width: 120px;
+    /* 追加修正 */
+    & .menu-left__text {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 16px;
+    }
 
 }
 
@@ -74,9 +80,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr auto;
-    /* 修正箇所 */
+    /* 追加修正 */
     height: 100%;
-  
     & .main-box__item {
         display: flex;
         height: 40px;
