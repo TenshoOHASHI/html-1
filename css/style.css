@@ -1,17 +1,18 @@
-body {
+/* body {
     margin: 0px;
-}
+} */
 
 .grid-container {
     display: grid;
     grid-template-columns: 120px 1fr 160px;
     /* 追加修正 */
-    grid-template-rows: 60px 1fr 60px;
+    grid-template-rows: 80px 1fr 60px;
     gap: 10px;
 
 }
 
 #header-1 {
+    width: 100%;
     height: 80px;
     /* width: 100%; */
     /* 一行列目選択 */
@@ -19,6 +20,8 @@ body {
     /* 一列から３列を指定 */
     grid-column: 1/4;
     background-color: red;
+    /* 追加修正 */
+    margin: -8px;
 }
 
 #aside-left-2 {
