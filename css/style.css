@@ -5,14 +5,15 @@
 .grid-container {
     display: grid;
     grid-template-columns: 120px 1fr 160px;
-    grid-template-rows: 80px 1fr 1fr;
+    /* 修正箇所 */
+    grid-template-rows: 80px 1fr;
     gap: 10px;
 
 }
 
 #header-1 {
     height: 80px;
-    width: 100%;
+    /* width: 100%; */
     /* 一行列目選択 */
     grid-row: 1/2;
     /* 一列から３列を指定 */
@@ -30,7 +31,8 @@
 #main-3 {
     grid-row: 2/3;
     grid-column: 2/3;
-    background-color: cyan;
+    /* 修正追加 */
+    background-color: black;
 }
 
 #aside-right-4 {
@@ -49,6 +51,8 @@
 
     & .footer__text {
         text-align: center;
+        /* 修正追加 */
+        font-weight: bold;
     }
 }
 
@@ -63,28 +67,29 @@
 .menu-left {
     height: 150vh;
     width: 120px;
+
 }
 
 .main-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /*  */
     grid-template-rows: 1fr 1fr 1fr auto;
-
-
+    /* 修正箇所 */
+    height: 100%;
+  
     & .main-box__item {
+        display: flex;
         height: 40px;
         margin: 20px;
         padding: 10px;
-
         background-color: white;
-
         border: 5px dotted red;
-    }
+        justify-content: center;
+    };
 }
 
 .side-box {
-    display: grid;
+    display:grid;
     grid-template-columns: 160px;
     grid-template-rows: repeat(3, 50vh);
     gap: 10px;
