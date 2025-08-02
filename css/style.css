@@ -20,8 +20,6 @@
     /* 一列から３列を指定 */
     grid-column: 1/4;
     background-color: red;
-    /* 追加修正 */
-    margin: -8px;
 }
 
 #aside-left-2 {
@@ -64,6 +62,8 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
+    top: 0px;
+    left: 0px;
 
 }
 
