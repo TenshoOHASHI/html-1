@@ -22,6 +22,7 @@ h1:hover {
 
 .btn {
     border: none;
+    color: black;
     background-color: white;
     border-radius: 8px;
     font-size: 32px;
@@ -31,13 +32,15 @@ h1:hover {
         transform 0.8s ease;
 }
 
-.animation-2:active {
-    background-color: red;
+/* クラスがついている状態でずっと反映 */
+.animation-2.active {
+    /* background-color: white; */
     transform: scale(1.5);
+    color: red;
 }
 
-
-.squre-spin {
+/* squareに修正 */
+.square-spin {
     cursor: pointer;
     border: none;
     background-color: blue;
@@ -49,7 +52,8 @@ h1:hover {
 
 }
 
-.squre-jump {
+/* squareに修正 */
+.square-jump {
     cursor: pointer;
     border: none;
     background-color: green;
@@ -69,13 +73,14 @@ h1:hover {
     font-family: sans-serif;
     background-color: white;
     margin: 0px;
-    transition: color 2s ease;
+    /* 状態変化（例：:hover や class追加）で開始 */
+    /* transition: color 2s ease; */
     animation: limit 2s ease 3;
 
 }
 
 @keyframes rotate {
-    form {
+    from {
         transform: rotate(0deg);
     }
 
