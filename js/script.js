@@ -1,3 +1,6 @@
+function debugColor(msg = null, bgc = 'darkblue', color = 'skyblue') {
+    console.log(`%c${msg}`, `background-color:${bgc}; color:${color}`);
+}
 // 1. 自己紹介メッセージ
 
 function introduce(callback) {
@@ -7,7 +10,7 @@ function introduce(callback) {
 }
 
 introduce((name, age) => {
-    console.log('%c自己紹介メッセージ', 'color: skyblue; font-weight: bold;');
+    debugColor('自己紹介メッセージ');
     console.log(`私の名前は${name}です。年齢は${age}です。`)
     // document.body.innerHTML += `<p>私の名前は${name}です。年齢は${age}です。</p>`;
 });
@@ -27,7 +30,8 @@ function getSquareArea(width, height, callback) {
     if (width === height) {
         shapeType = '正方形です。'
     } else if (width > height) {
-        shapeType = '横長の正方形です。'
+        // 修正：長方形に変更
+        shapeType = '横長の長方形です。'
     } else if (width < height) {
         shapeType = "縦長の長方形です。"
     } else {
@@ -38,7 +42,7 @@ function getSquareArea(width, height, callback) {
 
 
 getSquareArea(width, height, (area, shapeType) => {
-    console.log('%c長方形の面積計算', 'color: skyblue; font-weight: bold;');
+    debugColor('長方形の面積計算')
     console.log(`形は${shapeType}\n面積は${area}です。`)
 })
 
@@ -54,7 +58,7 @@ function isOdd(num) {
 }
 
 function checkEvenOrOdd(num) {
-    console.log('%c偶数と奇数の判定', 'color: skyblue; font-weight: bold;');
+    debugColor('偶数と奇数の判定')
 
     if (isEven(num)) {
         console.log('偶数です。')
@@ -65,11 +69,14 @@ function checkEvenOrOdd(num) {
     }
 }
 
+// 修正：変数に格納
+let num = -11;
 checkEvenOrOdd(let = -11);
 
-// 4. 未成年チョック
+// 4. 未成年チェック
 function isAdult(age) {
-    console.log('%c未成年チョック', 'color: skyblue; font-weight: bold;');
+    // 修正：スペルミス
+    debugColor('未成年チェック')
 
     if (age >= 18) {
         console.log('成人です。')
@@ -90,45 +97,49 @@ isAdult(0);
 // }
 // console.log(result)
 
-// アレー関数で容器を用意、スプレッドで１０個の要素に展開し、マッピング関数で値とインデックスを取り出し、再代入
+// アレイー関数で容器を用意、スプレッドで１０個の要素に展開し、マッピング関数で値とインデックスを取り出し、再代入
 const nums = [...Array(10)].map((_, i) => i + 1)
 function myReduce(arr, callback, start = 0) {
-    console.log('%c1から１０までの整数を足し合わせる', 'color: skyblue; font-weight: bold;');
+    debugColor('1から１０までの整数を足し合わせる')
 
     let accumulate = start;
     for (let i = 0; i < arr.length; i++) {
-        // first roop acc is 0, crr is 1, second roop acc is 1, curr is 2 , then return 3
+        // first: acc, crr = 0, 1, second: acc, curr = 1, 2 -> accumulate 3
         accumulate = callback(accumulate, arr[i]);
     }
-    console.log(accumulate)
     return accumulate;
 }
 
-myReduce(nums, (accumulate, curr) => accumulate + curr, 0)
+const result = myReduce(nums, (accumulate, curr) => accumulate + curr, 0)
+console.log(result);
 
 
 // 6. 成績判定
-
-let score = 59;
+let score = 101;
 
 function checkScore(score, cb) {
-    cb(score);
+    let result = cb(score);
+    console.log(result);
+
 }
 
+
 checkScore(score, (score) => {
-    console.log('%c成績判定', 'color: skyblue; font-weight: bold;');
+    debugColor('成績判定')
+    let result = ''
 
     if (score > 100) {
-        console.log("you are bug.");
-        return
+        return "もしかして、叡智を司る存在……宇宙人ですか";
     }
+    // 修正：以下仕様通りの、出力結果に変更
     if (score >= 80) {
-        console.log("You are fabulous!")
+        result += '成績はAです。';
     } else if (score >= 60 && score < 80) {
-        console.log("Not so bad.")
+        result += '成績はBです。'
     } else {
-        console.log("Damm it, Keep it up!")
+        result += '成績はCです。'
     }
+    return result;
 })
 
 // 7. FizzBuzzゲーム
@@ -148,7 +159,8 @@ const cb = function cb(i) {
 
 }
 function FizzBuzz(num, cb) {
-    console.log('%cFizzBuzzゲーム', 'color: skyblue; font-weight: bold;');
+    debugColor('FizzBuzzゲーム');
+
 
     for (let i = 1; i <= num; i++) {
         cb(i);
