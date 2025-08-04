@@ -7,6 +7,7 @@ function introduce(callback) {
 }
 
 introduce((name, age) => {
+    console.log('%c自己紹介メッセージ', 'color: skyblue; font-weight: bold;');
     console.log(`私の名前は${name}です。年齢は${age}です。`)
     // document.body.innerHTML += `<p>私の名前は${name}です。年齢は${age}です。</p>`;
 });
@@ -37,6 +38,7 @@ function getSquareArea(width, height, callback) {
 
 
 getSquareArea(width, height, (area, shapeType) => {
+    console.log('%c長方形の面積計算', 'color: skyblue; font-weight: bold;');
     console.log(`形は${shapeType}\n面積は${area}です。`)
 })
 
@@ -52,6 +54,8 @@ function isOdd(num) {
 }
 
 function checkEvenOrOdd(num) {
+    console.log('%c偶数と奇数の判定', 'color: skyblue; font-weight: bold;');
+
     if (isEven(num)) {
         console.log('偶数です。')
     } else if (isOdd(num)) {
@@ -65,6 +69,8 @@ checkEvenOrOdd(let = -11);
 
 // 4. 未成年チョック
 function isAdult(age) {
+    console.log('%c未成年チョック', 'color: skyblue; font-weight: bold;');
+
     if (age >= 18) {
         console.log('成人です。')
     } else if (age < 18 && age >= 0) {
@@ -87,6 +93,8 @@ isAdult(0);
 // アレー関数で容器を用意、スプレッドで１０個の要素に展開し、マッピング関数で値とインデックスを取り出し、再代入
 const nums = [...Array(10)].map((_, i) => i + 1)
 function myReduce(arr, callback, start = 0) {
+    console.log('%c1から１０までの整数を足し合わせる', 'color: skyblue; font-weight: bold;');
+
     let accumulate = start;
     for (let i = 0; i < arr.length; i++) {
         // first roop acc is 0, crr is 1, second roop acc is 1, curr is 2 , then return 3
@@ -108,6 +116,8 @@ function checkScore(score, cb) {
 }
 
 checkScore(score, (score) => {
+    console.log('%c成績判定', 'color: skyblue; font-weight: bold;');
+
     if (score > 100) {
         console.log("you are bug.");
         return
@@ -138,6 +148,8 @@ const cb = function cb(i) {
 
 }
 function FizzBuzz(num, cb) {
+    console.log('%cFizzBuzzゲーム', 'color: skyblue; font-weight: bold;');
+
     for (let i = 1; i <= num; i++) {
         cb(i);
     }
