@@ -21,6 +21,7 @@ let width = 5;
 let height = 7;
 
 function getSquareArea(width, height, callback) {
+    debugColor('長方形の面積計算')
     let area = width * height;
     let shapeType = "";
     if (isNaN(area) || area <= 0) {
@@ -42,7 +43,6 @@ function getSquareArea(width, height, callback) {
 
 
 getSquareArea(width, height, (area, shapeType) => {
-    debugColor('長方形の面積計算')
     console.log(`形は${shapeType}\n面積は${area}です。`)
 })
 
@@ -70,8 +70,8 @@ function checkEvenOrOdd(num) {
 }
 
 // 修正：変数に格納
-let num = -11;
-checkEvenOrOdd(let = -11);
+let num = -12;
+checkEvenOrOdd(num);
 
 // 4. 未成年チェック
 function isAdult(age) {
