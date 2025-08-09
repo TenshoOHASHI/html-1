@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    /* 最初の要素は固定し4列作成、他は均等にレキシブル対応 */
+    gap: 16px;
+
+}
+
+.fill {
+    /* 余白があく */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+
+}
+
+.fit {
+    display: grid;
+    /* 余白を開けない */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    margin-top: 20px;
+}
+
+.item {
+    background-color: orange;
+    padding: 20px;
+    /* 要素毎に、感覚を開ける */
+    /* margin: 16px; */
+
+}

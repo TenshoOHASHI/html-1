@@ -1,0 +1,66 @@
+/* 子要素の水平方向(主軸)揃いを指定 */
+.container-justify-content {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: baseline; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+
+
+
+}
+
+/* 子要素の垂直方向（交差軸）揃いを指定 */
+.container-align-items {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    align-items: baseline;
+}
+
+/* flex指定で横並びに変更 */
+/* flex-wrapで子要素を折り返し */
+/* align-contentで複数行を親要素の高幅に合わせて配置 */
+.container-flex-wrap {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    /* align-content: stretch; */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    align-content: space-evenly;
+
+
+
+}
+
+/* directionと折り返しなどの設定をまとめて指定できる */
+.container-flex-flow {
+    display: flex;
+    height: 100vh;
+    /* flex-flow: row nowrap; */
+    /* flex-flow: row wrap; */
+    /* flex-flow: row-reverse wrap-reverse; */
+    /* flex-flow: column nowrap; */
+    flex-flow: column-reverse;
+
+
+}
+
+.item {
+
+    background-color: orange;
+    margin: 20px;
+    padding: 10px;
+}
